@@ -1,0 +1,57 @@
+ body{
+ 	font-family: 'Work Sans', sans-serif;
+ }
+
+ nav.navbar a.theBrand{
+ 	color: #af111c !important;
+ 	font-variant: small-caps;
+ 	font-weight: bold;
+ 	font-size: 1.5em;
+ }
+
+ nav.navbar a.theBrand:hover{
+ 	/*font-variant: small-caps;*/
+ 	/*font-weight: bolder;*/
+ }
+
+ .navList a.nav-link:hover{
+ 	color: #af111c !important;
+ 	font-size: 1em;
+ }
+
+footer{
+	background-color: rgba(13,14,16,0.8); 
+	padding: 20px
+}
+
+ div.footer span{
+ 	font-variant: small-caps;
+ }
+
+ div.footer p{
+ 	color: white;
+ }
+
+ /*index css finito*/
+
+ /*donor register css start*/
+ 	.donorForm{
+ 		background-color: #F4F5F6;
+ 		padding:50px;
+ 		margin: 30px 0px;
+ 	}
+
+ 	.text-center{
+ 		text-align: center;
+ 	}
+
+ 	.submit-form{
+ 		margin-bottom: 30px;
+ 	}
+
+ 	textarea{
+ 		resize: none;
+ 	}
+
+
+ /*donor register css finito*/
