@@ -22,19 +22,21 @@
 
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
-	<script type="text/javascript" src="bjs/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bjs/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bjs/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bjs/util.js"></script>
 
 
 	<!-- for data table -->
 	<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
-	 
+
 	<script type="text/javascript" src="datatables/datatables.min.js"></script>
 
 </head>
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-light ">
-			<a class="navbar-brand theBrand mb-0 " href="#">Blood Bank Butwal</a>
+			<a class="navbar-brand theBrand mb-0 " href="dashboard.php">Blood Bank Butwal</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -56,11 +58,14 @@
 					<li class="nav-item">
 						<a class="nav-link" href="donorTable.php">Donor Table</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Donor Register</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="adminLogin.php">Admin Login</a>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account Manage</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">Edit Profile</a>
+							<a class="dropdown-item" href="#">Change Password</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item glyphicon glyphicon-log-out" href="logout.php">Log out</a>
+						</div>
 					</li>
 					
 				</ul>

@@ -6,7 +6,7 @@ if(isset($_POST['submit'])){
 	$logTest=$obj->loginChk($u,$p);
 	if($logTest==1){
 		$_SESSION['admin']=$u;
-		header("Location:index.php");
+		header("Location:dashboard.php");
 	}else{
 		$err="<strong style='color:red'>User / Password Wrong !!</strong>";
 	}
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
 
 </head>
 
-
+<body>
 <div class="container">
 	
 	<div class="row">
@@ -60,17 +60,17 @@ if(isset($_POST['submit'])){
 					</p>
 					<hr>
 				</div>
-				<form action="/" method="POST" >
+				<form action="adminlogin.php" method="POST" >
 					<div class="form-group">
 						<label for="adminEmail">Email Address</label>
-						<input type="email" name="email" class="form-control" id="email" aria-describedby="fullName" placeholder="">
+						<input type="text" name="name" class="form-control" id="email" aria-describedby="fullName" placeholder="Enter Username" required>
 					</div>
 					<div class="form-group">
 						<label for="adminPassword">Password</label>							
-						<input type="password" name="password" id="password" class="form-control">
+						<input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" required>
 					</div>					
 
-					<button type="submit" class="btn btn-primary">Login</button>
+					<button type="submit" class="btn btn-primary" name="submit">Login</button>
 					<button class="btn btn-danger" name="reset">Forgot Password</button>
 					<div class="form-group">
 						<label><?php if(!empty($err)){ echo $err; }; ?></label>
