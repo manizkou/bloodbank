@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
 
 // Data
 	
-	$fupload=$obj->UploadFile($i_name,$i_size,$i_type,$i_tmp,'donarimg');
+	$fupload=$obj->UploadFile($i_name,$i_size,$i_type,$i_tmp,'donorimg');
 	if($fupload==1){
 		$register=$obj->DonorRegister($name,$bloodgroup,$contact,$landlinecontact,$city,$address,$email,$availability,$i_name);
 	}else{

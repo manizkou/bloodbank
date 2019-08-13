@@ -51,13 +51,54 @@ include('header.php');
 								<td><?php echo $data['address']; ?></td>
 								<td><?php echo $data['email']; ?></td>
 								<td><?php echo $data['availability']; ?></td>
-								<th><a href="#" style="text-decoration: none !important;"><CENTER><i class="fas fa-eye"></i></CENTER></th>
-			
+								<th><CENTER><i class="fas fa-eye view-details" data-toggle="modal" data-target="#modal" style="cursor: pointer;transition: 0.5s;"></i></CENTER></th>
+
+								
+								
 								<td><a href="editdonar.php?id=<?php echo $data['donarid'];?>"><i class="fas fa-edit"></i></a> / <a href="dashboard.php?id=<?php echo $data['donarid'];?>&pg=<?php echo $page; ?>" style="color:#EB0206;"><i class="fas fa-trash-alt"></i></a></td>
 
+								<!-- Modal -->
 
-							</tr>
+								<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-scrollable" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title" id="modal">Donar Details</h4>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<div class="donor-profile">
+													<div class="donor-img">
+														<img style="align=middle;" src="donorimg/<?php echo $data['image']; ?>" >
+													</div>
+													<center>
+														<div class="donor-details" style="color:white;">
+															<p><strong>Name :</strong>&nbsp;<?php echo $data['name']; ?></p>
+															<p><strong>Email :</strong>&nbsp;<?php echo $data['email']; ?></p>
+															<p><strong>Blood Group :</strong>&nbsp;<?php echo $data['bloodgroup']; ?></p>
+															<p><?php echo $data['availability']; ?>&nbsp;&nbsp;<i class="far fa-check-square" style="color:white;background-color: green;"></i></p>
+															<p><strong>Contact :</strong>&nbsp;<?php echo $data['contact']; ?></p>
+															<p><strong>Landline :</strong>&nbsp; <?php echo $data['landlinecontact']; ?></p>
+															<p><strong>City :</strong>&nbsp;<?php echo $data['city']; ?></p>
+															<p><strong>Address :</strong>&nbsp;<?php echo $data['address']; ?></p>
+														</div>
+													</center>
 
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								
+
+							</tr>		
+					
 
 							<?php
 							$i++;
@@ -72,10 +113,15 @@ include('header.php');
 	</div>
 	
 </div>
+
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#example').DataTable();
 	} );
+	$('#myModal').on('shown.bs.modal', function () {
+		$('#myInput').trigger('focus')
+	});
 </script>
 <?php
 include('footer.php');

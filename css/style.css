@@ -1,0 +1,20 @@
+.donorTable .table .view-details:hover{
+	color:red;
+}
+.modal .modal-body .donor-profile{
+	background-color:#af111c;
+	padding:15px;
+}
+
+.modal .modal-body .donor-profile .donor-img img{
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+	padding:10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.modal .modal-body .donor-profile
+    border-top: 1px solid #96030d;
