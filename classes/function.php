@@ -35,7 +35,7 @@ class Functions extends DataBase{
 		if($i_type=='image/jpeg' || $i_type=='image/png' || $i_type=='image/gif'){
 
 			if($i_type<=8388608){
-				$up=move_uploaded_file($i_temp,$i_name);
+				$up=move_uploaded_file($i_temp,'./'.$d.'/'.$i_name);
 				if($up){
 					return 1;
 				}

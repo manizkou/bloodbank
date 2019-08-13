@@ -103,7 +103,7 @@ include('header.php');
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="profilePicture">Upload Profile Picture</label>
+						<label for="profilePicture">Upload Profile Picture(Max 8 Mb)</label>
 						<input type="file" name="image" id="profilePicture">
 					</div>
 
