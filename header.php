@@ -53,7 +53,7 @@
 						<a class="nav-link" href="donorregister.php">Donor Register</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Donors</a>
+						<a class="nav-link" href="donors.php">Donors</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="donorTable.php">Donor Table</a>
