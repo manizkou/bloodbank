@@ -51,6 +51,38 @@ class Functions extends DataBase{
 
 
 	}
+	function getDonar(){
+		$sql="select*from tbl_donarreg";
+		$resutl=$this->exec($sql);
+		return $resutl;
+		}
+		
+		function getTeamd($id){
+		$sql="select*from tbl_donarreg where id='$donarid'";
+		$resutl=$this->exec($sql);
+		return $resutl->fetch_assoc();
+		}
+		
+		function del($id,$p,$t,$in,$dir){
+					$sql="Delete from $t where id='$id'";
+					$result=$this->exec($sql);
+					if($result){
+						if(!empty($in)){
+						$del=unlink('../'.$dir.'/'.$in);
+						if($del){
+								$this->redirect('dashboard.php?pg='.$p.'');
+							}
+							}else{
+					$this->redirect('dashboard.php?pg='.$p.'');
+							}
+					}else{
+						$this->error("Error ");
+						}
+					}
+
+
+
+
 }
 
 ?>
