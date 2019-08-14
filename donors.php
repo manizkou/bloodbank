@@ -3,7 +3,7 @@ include 'header.php';
 ?>
 
 <div class="container">
-	<div class="row donors">
+	<div class="row donor-cards">
 
 		<div class="col-sm-12">
 			<h2 class="text-center "><u> Donors </u></h2>	
