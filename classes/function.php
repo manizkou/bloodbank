@@ -58,7 +58,7 @@ class Functions extends DataBase{
 		}
 		
 		function getTeamd($id){
-		$sql="select*from tbl_donarreg where id='$donarid'";
+		$sql="select*from tbl_donarreg where id='$donorid'";
 		$resutl=$this->exec($sql);
 		return $resutl->fetch_assoc();
 		}

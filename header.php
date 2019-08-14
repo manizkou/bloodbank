@@ -28,8 +28,7 @@
 	<script type="text/javascript" src="js/bjs/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bjs/util.js"></script>
 
-	<!-- online fontawesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+
 
 	<!-- for data table -->
 	<link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>

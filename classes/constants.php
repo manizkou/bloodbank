@@ -5,7 +5,7 @@ define("PASSWORD","");
 // Table infomation
 define("DATABASE","bloodbank");
 define("ADMIN","tbl_admin");
-define("DONARREGISTER","tbl_donarreg");
+define("DONORREGISTER","tbl_donarreg");
 
 
 
