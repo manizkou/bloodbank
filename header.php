@@ -51,9 +51,6 @@
 						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 					</li> -->
 					<li class="nav-item">
-						<a class="nav-link" href="#">Request</a>
-					</li>
-					<li class="nav-item">
 						<a class="nav-link" href="donorregister.php">Donor Register</a>
 					</li>
 					<li class="nav-item">
