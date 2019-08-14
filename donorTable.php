@@ -15,12 +15,12 @@ if(!empty($_REQUEST['donorid'])){
 include('header.php');
 ?>
 
-<div class="container">
-	<div class="row">
+<div class="container-fluid ">
+	<div class="row px-2">
 		<div class="col-md-12">
 			<div class="donorTable  my-5" >
 				<h1 class="text-center pb-3" style="text-decoration: underline;"><b>DONOR TABLE</b></h1>
-				<table id="donorTable" class="table table-striped table-bordered" style="width:100%">
+				<table id="donorTable" class="table table-striped table-bordered table-responsive" style="width:100%">
 					<thead>
 						<tr>
 							<th>S.N.</th>
