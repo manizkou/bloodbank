@@ -35,11 +35,11 @@ footer{
  /*index css finito*/
 
 /*common css*/
-
+	
 
 /*common css end*/
 
- /*donor register css start*/
+/*donor register css start*/
  	.donorForm{
  		background-color: #F4F5F6;
  		padding:50px;
@@ -60,3 +60,15 @@ footer{
 
 
  /*donor register css finito*/
+
+/*donors.php css*/
+.card-body .fas{
+	color:#af111c;
+}
+
+.donor-cards div[class*= "col-"]{
+	margin-top:15px;
+}
+
+
+/*donors.php css finito*/
