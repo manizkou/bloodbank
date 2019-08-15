@@ -55,31 +55,45 @@ class Functions extends DataBase{
 		$sql="select*from tbl_donarreg";
 		$resutl=$this->exec($sql);
 		return $resutl;
-		}
-		
-		function getTeamd($id){
+	}
+
+	function getTeamd($id){
 		$sql="select*from tbl_donarreg where id='$donorid'";
 		$resutl=$this->exec($sql);
 		return $resutl->fetch_assoc();
-		}
-		
-		function del($id,$p,$t,$in,$dir){
-					$sql="Delete from $t where id='$id'";
-					$result=$this->exec($sql);
-					if($result){
-						if(!empty($in)){
-						$del=unlink('../'.$dir.'/'.$in);
-						if($del){
-								$this->redirect('dashboard.php?pg='.$p.'');
-							}
-							}else{
-					$this->redirect('dashboard.php?pg='.$p.'');
-							}
-					}else{
-						$this->error("Error ");
-						}
-					}
+	}
 
+	function del($id,$p,$t,$in,$dir){
+		$sql="Delete from $t where id='$id'";
+		$result=$this->exec($sql);
+		if($result){
+			if(!empty($in)){
+				$del=unlink('../'.$dir.'/'.$in);
+				if($del){
+					$this->redirect('dashboard.php?pg='.$p.'');
+				}
+			}else{
+				$this->redirect('dashboard.php?pg='.$p.'');
+			}
+		}else{
+			$this->error("Error ");
+		}
+	}
+	function getDonorFilter(){
+		$sql="select*from ".BLOODGROUPNAME."";
+		$result=$this->exec($sql);
+		return $result;
+
+	}
+	function DonorResult($f){
+		if(!empty($f)){
+			$sql="select*from ".DONORREGISTER." where bloodgroup='$f' order by donorid ASC";
+		}else{
+			$sql="select*from ".DONORREGISTER." order by donorid ASC";
+		}
+		return $this->exec($sql);
+
+	}
 
 
 

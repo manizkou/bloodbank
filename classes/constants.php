@@ -6,6 +6,7 @@ define("PASSWORD","");
 define("DATABASE","bloodbank");
 define("ADMIN","tbl_admin");
 define("DONORREGISTER","tbl_donarreg");
+define("BLOODGROUPNAME","tbl_bloodgroup");
 
 
 
