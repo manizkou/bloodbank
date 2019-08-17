@@ -22,11 +22,14 @@
 	<link href="css/fontawesome/css/all.css" rel="stylesheet">
 
 
+
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bjs/bootstrap.js"></script>
 	<script type="text/javascript" src="js/bjs/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bjs/util.js"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/search.js"></script>
 
 
 
@@ -62,8 +65,8 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account Manage</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Edit Profile</a>
-							<a class="dropdown-item" href="#">Change Password</a>
+							<a class="dropdown-item" href="editU.php">Edit Profile</a>
+							<a class="dropdown-item" href="Cngpass.php">Change Password</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt"></i>Log out</a>
 						</div>

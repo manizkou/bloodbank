@@ -80,22 +80,73 @@ class Functions extends DataBase{
 		}
 	}
 	function getDonorFilter(){
-		$sql="select*from ".BLOODGROUPNAME."";
+		$sql="select*from ".DONORREGISTER."";
 		$result=$this->exec($sql);
 		return $result;
 
 	}
-	function DonorResult($f){
-		if(!empty($f)){
-			$sql="select*from ".DONORREGISTER." where bloodgroup='$f' order by donorid ASC";
-		}else{
-			$sql="select*from ".DONORREGISTER." order by donorid ASC";
+	function getFilter(){
+		$query ="select*from tbl_donarreg";
+		$result=$this->exec($query);
+		return $result->fetch_assoc();
+	}
+	function getDataFilter(){
+		$query ="select*from tbl_donarreg";
+		$result=$this->exec($query);
+		$output = '';
+		if($result && $result->num_rows >0){
+			foreach($result as $row)
+			{
+				$output .= '
+				<div class="col-sm-6 col-md-3">
+				<div class="card">
+				<img class="card-img-top" src="donorimg/'.$row['image'].'" alt="" width="360px" height="200px">
+				<div class="card-body">
+				<p><i class="fas fa-user-alt"></i>' . ' &nbsp;' . $row['name'] .'</p>
+				<p><i class="fas fa-tint red"></i>' . ' &nbsp;' . $row['bloodgroup'] .'</p>
+				<p><i class="fas fa-user-circle"></i>' . ' &nbsp;' . $row['availability'] .'</p>
+				<p><i class="fas fa-location-arrow"></i>' . ' &nbsp;' . $row['address'] .'</p>
+				<p><i class="fas fa-mobile-alt"></i>' . ' &nbsp;' . $row['contact'] .'</p>
+
+
+
+				</div>
+
+				</div>
+				</div> ';
+
+			}
+
 		}
-		return $this->exec($sql);
+		else{
+			$output = '<h3>No Data Found</h3>';
+
+			echo $output;
+		}
+
 
 	}
+	function userData($u){
+		$sql="select*from tbl_admin where user='$u'";
+		$result=$this->exec($sql);
+		return $result->fetch_assoc();
+		
+	}
 
-
+	function cngProfile($n,$u,$e,$i){
+		$sql="update tbl_admin SET name='$n',user='$u',email='$e' where id='$i'";
+		$result=$this->exec($sql);
+		if($result){
+			$this->redirect("dashboard.php?pg=editU.php&smg=ProfileChange Successful");
+		}
+	}
+	function cngPassword($u,$p){
+		$sql="update tbl_admin SET password='$p' where user='$u'";
+		$result=$this->exec($sql);
+		if($result){
+			$this->redirect("dashboard.php?pg=chgPass.php&smg=Password Change Successful");
+		}
+	}
 
 }
 
